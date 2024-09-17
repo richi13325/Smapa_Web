@@ -3,3 +3,58 @@
 body{
     font-family: 'Lato', sans-serif
 }
+
+:root{
+    --padding-container: 100px 0;
+    --color-tittle: #001A49;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-rows:100px 1fr;
+
+}
+
+.nav{
+    --padding-c3ontainer: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #11A5E5;
+}
+.nav_tittle{
+    font-weight: 300;
+
+}
+
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    gap: 2em;
+}
+
+
+.nav_items{
+    list-style: none;
+}
+
+
+.nav_links{
+    color: #fff;
+    padding: 0;
+}
