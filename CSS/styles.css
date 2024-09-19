@@ -15,7 +15,6 @@ body{
     margin: 0 auto;
     overflow: hidden;
     padding: var(--padding-container);
-
 }
 
 .hero{
@@ -23,7 +22,7 @@ body{
     height: 100vh;
     position: relative;
     display: grid;
-    grid-template-rows:100px 1fr;
+    grid-template-rows:70px 1fr;
 
 }
 
@@ -35,17 +34,18 @@ body{
     background-color: #11A5E5;
 }
 .nav_tittle{
-    font-weight: 300;
+    font-weight: 600;
 
 }
 
 .nav_link{
     margin-left: auto;
-    padding: 0;
+    padding: 0 45px;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: max-content;
     gap: 2em;
+
 }
 
 
@@ -57,4 +57,10 @@ body{
 .nav_links{
     color: #fff;
     padding: 0;
+}
+
+.nav_logo{
+    padding-left: 55px;
+    font-weight: 600;
+    font-size: 30px;
 }
