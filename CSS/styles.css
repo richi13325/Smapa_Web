@@ -54,7 +54,8 @@ body{
 }
 
 
-.nav_links{
+.nav_links {
     color: #fff;
-    padding: 0;
+    padding: 15px 20px; /* Aumenta el área de selección */
+    text-decoration: none;
 }

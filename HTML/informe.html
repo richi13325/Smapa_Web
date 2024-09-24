@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Fallas - SMAPA</title>
+    <link rel="shortcut icon" href="/images/Shankfast.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/normalizar.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/styles_informe.css">
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .close-btn {
+            background-color: #11A5E5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .close-btn:hover {
+            background-color: #0b87c9;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="nav container"> 
+            <div class="nav_logo">
+                <h1 class="nav_title">SMAPA</h1>
+            </div>
+            <ul class="nav_link nav_link--menu">
+                <li class="nav_items">
+                    <a href="index.html" class="nav_links">Inicio</a> 
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Informe</a> 
+                </li>                     
+                <li class="nav_items">
+                    <a href="" class="nav_links">Contacto</a>
+                </li>
+                <li class="nav_items">
+                    <a href="" class="nav_links">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="informe" class="container">
+            <h2>Informe de Fallas en Tuberías</h2>
+            <p>Si detectas fallas en las tuberías de agua, por favor repórtalo completando el siguiente formulario:</p>
+            
+            <form id="reportForm" class="styled-form">
+                <!-- Form fields remain the same -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Número de Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de celular" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección de la Falla:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Ingresa la dirección de la falla" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="colonia">Colonia:</label>
+                    <input type="text" id="colonia" name="colonia" placeholder="Ingresa la colonia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo-postal">Código Postal:</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Ingresa el código postal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción del Problema:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente el problema" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Reporte</button>
+            </form>
+        </section>
+
+        <!-- Modal -->
+        <div id="thankYouModal" class="modal">
+            <div class="modal-content">
+                <h3>¡Gracias por tu reporte!</h3>
+                <p>Tu reporte ha sido enviado exitosamente.</p>
+                <button class="close-btn" id="closeBtn">Aceptar</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('reportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            document.getElementById('thankYouModal').style.display = 'block'; 
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; 
+        });
+    </script>
+</body>
+</html>
