@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 *{
     margin: 0;
@@ -16,32 +17,49 @@ header{
     background: #fff;
 }
 
+main{
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding: 20px;
+}
+
 /*Parte superior LOGO*/
 .header_superior{
     max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+}
+.logo{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
 }
 
 .logo img{
-    width: 80px;
-    margin-left: 60px;
+    max-width: 100%; 
+    width: 70px;
 }
 
 .nav_inicio{
-    font-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: #023877;
 }
 
 /*Barra de menu*/
-
 
 .container_menu{
     width: 100%;
     height: 70px;
     background: #023877;
     padding: 0 20px;
+    
 }
 
 .menu{
@@ -158,42 +176,5 @@ nav ul li ul li a:hover{
     padding-left: 25px;
     font-size: 14px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
-}
-
-/*
-.link{
-    font-size: 10px;
-}
-
-.nav_tittle{
-    font-weight: 600;
-
-}
-
-.nav_link{
-    margin-left: auto;
-    padding: 0 45px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: max-content;
-    gap: 2em;
-
-}
-
-
-.nav_items{
-    list-style: none;
-}
-
-
-.nav_links, .nav_inicio{
-    color: #fff;
-    padding: 0;
-}
-
-.nav_inicio{
-    margin-left: 60px;
-    font-weight: 600;
-    font-size: 30px;
 }
 
