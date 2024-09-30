@@ -55,62 +55,123 @@
             <form id="reportForm" class="styled-form">
 
                 <div class="form-group">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="apellido-paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido-paterno" name="apellido-paterno" placeholder="" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="apellido-materno">Apellido Materno:</label>
+                    <input type="text" id="apellido-materno" name="apellido-materno" placeholder="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="celular">Número de Celular:</label>
-                    <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de celular" required>
+                    <input type="tel" id="celular" name="celular" placeholder="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="direccion">Dirección de la Falla:</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Ingresa la dirección de la falla" required>
+                    <input type="text" id="direccion" name="direccion" placeholder="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="colonia">Colonia:</label>
-                    <input type="text" id="colonia" name="colonia" placeholder="Ingresa la colonia" required>
+                    <select id="colonia" name="colonia" required>
+                        <option value="">Selecciona una colonia</option>
+                        <option value="colonia1">Colonia 1</option>
+                        <option value="colonia2">Colonia 2</option>
+                        <option value="colonia3">Colonia 3</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="codigo-postal">Código Postal:</label>
-                    <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Ingresa el código postal" required>
+                    <input type="text" id="codigo-postal" name="codigo-postal" placeholder="" required>
                 </div>
 
                 <div class="form-group">
                     <label for="descripcion">Descripción del Problema:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente el problema" required></textarea>
+                    <select id="descripcion" name="descripcion" required>
+                        <option value="">Selecciona un problema</option>
+                        <option value="problema1">Problema 1</option>
+                        <option value="problema2">Problema 2</option>
+                        <option value="problema3">Problema 3</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    <input type="email" id="email" name="email" placeholder="" required>
                 </div>
 
                 <button type="submit" class="submit-btn">Enviar Reporte</button>
             </form>
         </section>
 
-        <!-- Modal -->
-        <div id="thankYouModal" class="modal">
-            <div class="modal-content">
-                <h3>¡Gracias por tu reporte!</h3>
-                <p>Tu reporte ha sido enviado exitosamente.</p>
-                <button class="close-btn" id="closeBtn">Aceptar</button>
-            </div>
-        </div>
+<!-- Modal para mostrar después del envío -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="modal-text"></span>
+        <br><br>
+        <button class="close-btn" id="close-modal">Cerrar</button>
+    </div>
+</div>
 
-    <script>
-        document.getElementById('reportForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            document.getElementById('thankYouModal').style.display = 'block'; 
-        });
 
-        document.getElementById('closeBtn').addEventListener('click', function() {
-            window.location.href = 'index.html'; 
-        });
-    </script>
+        <script>
+            // Función para obtener el número de reporte actual desde localStorage
+            function obtenerNumeroReporte() {
+                let numeroReporte = localStorage.getItem('numeroReporte');
+                if (numeroReporte === null) {
+                    // Si no hay un número almacenado, inicializarlo en 0000
+                    numeroReporte = 0;
+                } else {
+                    // Incrementar el número almacenado
+                    numeroReporte = parseInt(numeroReporte, 10) + 1;
+                    // Limitar el número a 1000
+                    if (numeroReporte > 1000) {
+                        numeroReporte = 0; // Reiniciar a 0000 cuando llegue a 1000
+                    }
+                }
+                // Guardar el número actualizado en localStorage
+                localStorage.setItem('numeroReporte', numeroReporte);
+                return numeroReporte.toString().padStart(4, '0'); // Convertir a string y agregar ceros al inicio
+            }
+            
+            document.getElementById('reportForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+                
+                // Captura los valores del formulario
+                const nombre = document.getElementById('nombre').value;
+                const apellidoPaterno = document.getElementById('apellido-paterno').value;
+                const apellidoMaterno = document.getElementById('apellido-materno').value;
+            
+                // Obtener el número de reporte incremental
+                const numeroIncremental = obtenerNumeroReporte();
+            
+                // Obtener iniciales del nombre y apellidos
+                const iniciales = nombre.charAt(0).toUpperCase() + apellidoPaterno.charAt(0).toUpperCase() + apellidoMaterno.charAt(0).toUpperCase();
+            
+                // Generar el número de reporte
+                const numeroReporte = iniciales + "-" + numeroIncremental;
+            
+                // Mostrar el número de reporte en el modal
+                document.getElementById('modal-text').innerHTML = "Tu reporte ha sido enviado con éxito.<br>No. Reporte: <strong>" + numeroReporte + "</strong>";
+            
+                // Mostrar el modal
+                document.getElementById('modal').style.display = "block";
+            });
+            
+            // Código para cerrar el modal
+            document.getElementById('close-modal').addEventListener('click', function() {
+                document.getElementById('modal').style.display = "none";
+            });
+            </script>
+            
 </body>
 </html>
