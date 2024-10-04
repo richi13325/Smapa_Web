@@ -41,12 +41,8 @@ main{
     justify-content: center; 
     gap: 10px; 
 }
-.logo{
-    padding: 8px 50px;
-}
 
 .logo img{
-<<<<<<< Updated upstream:CSS/styles_principal.css
     max-width: 100%; 
     width: 70px;
 }
@@ -56,18 +52,6 @@ main{
     font-size: 45px;
     font-weight: 500;
     color: #023877;
-=======
-    width: 80px;
-}
-
-.nav_inicio{
-    font-style: none;
-    font-size: 50px;
-    padding: auto;
-    color: #023877;
-    font-weight: 600;
-
->>>>>>> Stashed changes:CSS/styles.css
 }
 
 /*Barra de menu*/
@@ -200,12 +184,4 @@ nav ul li ul li a:hover{
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 }
 /*Parte principal */
-
-section{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #5e6e7909;
-}
 
