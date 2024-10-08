@@ -11,6 +11,15 @@ main{
     margin-top: 100px;
 }
 
+.ul_materiales{
+    margin: 20px;
+    padding: 10px 0px;
+}
+
+h2{
+    text-align: center;
+}
+
 .material_container{
     width: 100%;
     padding-top: 100px;
@@ -20,23 +29,76 @@ main{
 
 .material_box{
     margin: auto;
-    padding: 30px 25px;
-    background-color: #ffff;
+    padding: 30px 25px 25px 25px;
+    background-color: #d3d7df;
     box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
 }
 
-h2{
-    text-align: center;
-}
-
-.material_list{
-    margin: 20px;
-    padding: auto;
-}
-
 .material_type{
     padding: 10px 3px;
 }
+
+.li_material{
+    margin:auto;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirm_box{
+    margin: 10px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.confirm_button{
+    display: inline-block;
+    border: 0;
+    background-color: #0074c7;
+    border-radius: 6px;
+    color: #ffff;
+    font-size: 18px;
+    padding: 8px;    
+    cursor: pointer;
+    transition: .3s;
+}
+
+.confirm_button:hover{
+    transform: scale(0.9);
+    background-color: #023877 ;
+}
+
+.cant_button{
+    height: 40px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-left: auto;
+}
+
+.cant_button span{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cant_button span .num{
+    font-size: 13px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+
+}
+
+

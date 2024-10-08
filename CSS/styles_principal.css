@@ -16,7 +16,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 main{
@@ -51,15 +51,14 @@ main{
     font-family: 'Ubuntu', sans-serif;
     font-size: 45px;
     font-weight: 500;
-    color: #023877;
+    color: black;
 }
-
 /*Barra de menu*/
 
 .container_menu{
     width: 100%;
     height: 70px;
-    background: #023877;
+    background: #022144;
     padding: 0 20px;
     
 }
@@ -116,13 +115,13 @@ nav > ul> li > a{
 
 nav > ul > li > a:hover{
     transform: scale(1.1);
-    background: #0074c7;
+    background: #075791;
     box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
 }
 
 #selected{
     transform: scale(1.1);
-    background-color: #0074c7;
+    background-color: #075791;
     box-shadow:0px 0px 10px 0px rgb(0,0,0,0.5);
 }
 
