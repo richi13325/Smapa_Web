@@ -83,11 +83,45 @@
                     <label for="colonia">Colonia:</label>
                     <select id="colonia" name="colonia" required>
                         <option value="">Selecciona una colonia</option>
-                        <option value="colonia1">Colonia 1</option>
-                        <option value="colonia2">Colonia 2</option>
-                        <option value="colonia3">Colonia 3</option>
+                        <option value="albania_baja">Albania Baja</option>
+                        <option value="albania_alta">Albania Alta</option>
+                        <option value="caminera">Caminera</option>
+                        <option value="capulines">Capulines</option>
+                        <option value="cerro_hueco">Cerro Hueco</option>
+                        <option value="colinas_del_sur">Colinas del Sur</option>
+                        <option value="el_jobo">El Jobo</option>
+                        <option value="el_retiro">El Retiro</option>
+                        <option value="el_rosario">El Rosario</option>
+                        <option value="el_vergel">El Vergel</option>
+                        <option value="emiliano_zapata">Emiliano Zapata</option>
+                        <option value="estrella_roja">Estrella Roja</option>
+                        <option value="fovisste">Fovisste</option>
+                        <option value="francisco_i_madero">Francisco I. Madero</option>
+                        <option value="jardines_del_pedregal">Jardines del Pedregal</option>
+                        <option value="jardines_de_tuxtla">Jardines de Tuxtla</option>
+                        <option value="las_aguilas">Las Águilas</option>
+                        <option value="las_arboledas">Las Arboledas</option>
+                        <option value="las_granjas">Las Granjas</option>
+                        <option value="las_palmas">Las Palmas</option>
+                        <option value="los_manguitos">Los Manguitos</option>
+                        <option value="los_pajaros">Los Pájaros</option>
+                        <option value="los_presidentes">Los Presidentes</option>
+                        <option value="moctezuma">Moctezuma</option>
+                        <option value="paso_limon">Paso Limón</option>
+                        <option value="patria_nueva">Patria Nueva</option>
+                        <option value="plan_de_ayala">Plan de Ayala</option>
+                        <option value="potinaspak">Potinaspak</option>
+                        <option value="san_jose_teran">San José Terán</option>
+                        <option value="san_pedro_progresivo">San Pedro Progresivo</option>
+                        <option value="san_roque">San Roque</option>
+                        <option value="santa_cruz">Santa Cruz</option>
+                        <option value="teran">Terán</option>
+                        <option value="villahermosa">Villahermosa</option>
+                        <option value="xamaipak">Xamaipak</option>
+                        <option value="zapata">Zapata</option>
                     </select>
                 </div>
+                
 
                 <div class="form-group">
                     <label for="codigo-postal">Código Postal:</label>
@@ -98,11 +132,13 @@
                     <label for="descripcion">Descripción del Problema:</label>
                     <select id="descripcion" name="descripcion" required>
                         <option value="">Selecciona un problema</option>
-                        <option value="problema1">Problema 1</option>
-                        <option value="problema2">Problema 2</option>
-                        <option value="problema3">Problema 3</option>
+                        <option value="fuga_agua">Fuga de agua</option>
+                        <option value="reparacion_tubo_surtidor">Reparación de tubo surtidor</option>
+                        <option value="reparacion_toma_domiciliaria">Reparación de toma domiciliaria</option>
+                        <option value="reparacion_valvula">Reparación de válvula</option>
                     </select>
                 </div>
+                
 
                 <div class="form-group">
                     <label for="email">Correo Electrónico:</label>
@@ -133,8 +169,8 @@
                 } else {
                     // Incrementar el número almacenado
                     numeroReporte = parseInt(numeroReporte, 10) + 1;
-                    // Limitar el número a 1000
-                    if (numeroReporte > 1000) {
+                    // Limitar el número a 9999
+                    if (numeroReporte > 9999) {
                         numeroReporte = 0; // Reiniciar a 0000 cuando llegue a 1000
                     }
                 }
@@ -167,10 +203,12 @@
                 document.getElementById('modal').style.display = "block";
             });
             
-            // Código para cerrar el modal
-            document.getElementById('close-modal').addEventListener('click', function() {
-                document.getElementById('modal').style.display = "none";
-            });
+// Código para cerrar el modal y redirigir a inicio.html
+document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = "none";
+    window.location.href = 'inicio.html'; // Redirecciona a inicio.html
+});
+
             </script>
             
 </body>
