@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAPA</title>
-    <link rel="stylesheet" href="/CSS/styles_personal.css">
-    <link rel="stylesheet" href="/CSS/styles_principal.css">
+    <title>Consultar Historial - SMAPA</title>
     <link rel="stylesheet" href="/CSS/normalizar.css">
+    <link rel="stylesheet" href="/CSS/styles_principal.css">
+    <link rel="stylesheet" href="/CSS/styles_informe.css">
 </head>
 <body>
     <header>
@@ -24,7 +24,7 @@
                         <li>
                             <a href="/HTML/inicio.html" id="selected"></a>
                         </li>
-                        <li><a  class="link">Trámites y Servicios</a>
+                        <li><a  class="link" href="" >Trámites y Servicios</a>
                             <ul>
                                 <li><a href="/HTML/informe.html">Realizar</a></li>
                                 <li><a href="/HTML/Consultar.html">Consultar</a></li>
@@ -37,7 +37,7 @@
                             <a class="link" href="/HTML/Almacen.html">Almacen</a>
                         </li>
                         <li>
-                            <a class="link" href="#">Personal</a>
+                            <a class="link" href="/HTML/personal.html">Personal</a>
                         </li>
                         <li>
                             <a class="link" href="#">Colonias</a>
@@ -47,21 +47,24 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="login_container">
-            <form class="formulario_asistencia">
-                <h2>Asistencia del día</h2>
-                <select class="select_container" name="hola">
-                    <option value="1">juan</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
-                <input class="submit" type="button" value="Enviar">
-            </form>
-        </section>
-    </main>
+
+    <section id="consulta" class="container">
+        <h2>Historial de Reportes</h2>
+        <div id="reportes">
+            <!-- Aquí se mostrará el historial de reportes -->
+        </div>
+    </section>
+
+    <script>
+        // Cargar el historial de reportes al cargar la página
+        window.onload = function() {
+            fetch('/PHP/consultar.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('reportes').innerHTML = data;
+                })
+                .catch(error => console.error('Error al cargar los reportes:', error));
+        };
+    </script>
 </body>
 </html>
