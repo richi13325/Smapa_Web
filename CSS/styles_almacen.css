@@ -75,20 +75,22 @@ h2{
 }
 
 .cant_button{
-    height: 40px;
+    background-color: #d3d7df;
+    height: 30px;
     min-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
     margin-left: auto;
+    border-style: hidden hidden solid hidden;
 }
 
 .cant_button span{
     width: 100%;
     text-align: center;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     user-select: none;
 }
