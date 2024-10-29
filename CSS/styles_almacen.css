@@ -1,63 +1,57 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-main{
-    width: 100%;
-    margin: auto;
-    margin-top: 100px;
-}
 
-.ul_materiales{
+.ul_materiales {
     margin: 20px;
     padding: 10px 0px;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-.material_container{
+.material_container {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 50px;
     max-width: 600px;
     margin: auto;
 }
 
-.material_box{
+.material_box {
     margin: auto;
     padding: 30px 25px 25px 25px;
     background-color: #d3d7df;
-    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
 }
 
-.material_type{
+.material_type {
     padding: 10px 3px;
 }
 
-.li_material{
-    margin:auto;
+.li_material {
+    margin: auto;
     padding: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.confirm_box{
+.confirm_box {
     margin: 10px;
     padding: auto;
     display: flex;
     justify-content: center;
-
 }
 
-.confirm_button{
+.confirm_button {
     display: inline-block;
     border: 0;
     background-color: #0074c7;
@@ -69,12 +63,12 @@ h2{
     transition: .3s;
 }
 
-.confirm_button:hover{
+.confirm_button:hover {
     transform: scale(0.9);
-    background-color: #023877 ;
+    background-color: #023877;
 }
 
-.cant_button{
+.cant_button {
     height: 40px;
     min-width: 100px;
     display: flex;
@@ -84,7 +78,7 @@ h2{
     margin-left: auto;
 }
 
-.cant_button span{
+.cant_button span {
     width: 100%;
     text-align: center;
     font-size: 15px;
@@ -93,12 +87,9 @@ h2{
     user-select: none;
 }
 
-.cant_button span .num{
+.cant_button span .num {
     font-size: 13px;
-    border-right: 2px solid rgba(0,0,0,0.2);
-    border-left: 2px solid rgba(0,0,0,0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
     pointer-events: none;
-
 }
-
-

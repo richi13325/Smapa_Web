@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="/CSS/normalizar.css">
     <link rel="stylesheet" href="/CSS/styles_principal.css">
     <link rel="stylesheet" href="/CSS/styles_informe.css">
-
 </head>
 <body>
-    <header>
+    <header class="header_inicio padding_main">
         <div class="header_superior">
             <div class="logo">
-                <img src="/images/logo.png" alt="">
-                <a class="nav_inicio" href="/HTML/inicio.html">Blue Spring</a>
+                <img src="../images/logo.png">
+                <a class="nav_inicio" href="/HTML/index.html">Blue Spring</a>
             </div>
         </div>
         <div class="container_menu">
@@ -25,7 +24,7 @@
                         <li>
                             <a href="/HTML/inicio.html" id="selected"></a>
                         </li>
-                        <li><a  class="link" href="" >Trámites y Servicios</a>
+                        <li><a  class="link">Trámites y Servicios</a>
                             <ul>
                                 <li><a href="/HTML/informe.html">Realizar</a></li>
                                 <li><a href="#">Consultar</a></li>
@@ -48,7 +47,7 @@
             </div>
         </div>
     </header>
-        <section id="informe" class="container">
+        <section id="informe" class="container " >
             <h2>Informe de Fallas en Tuberías</h2>
             <p>Si detectas fallas en las tuberías de agua, por favor repórtalo completando el siguiente formulario:</p>
             
@@ -148,6 +147,22 @@
                 <button type="submit" class="submit-btn">Enviar Reporte</button>
             </form>
         </section>
+        <footer class="footer">
+            <div class="footer_content">
+                <div class="footer_section about">
+                    <h3>Sobre Blue Spring</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue facilisis ipsum, a tempus nisi.</p>
+                </div>
+                <div class="footer_section contact">
+                    <h3>Contáctanos</h3>
+                    <p>Teléfono: +123 456 789</p>
+                    <p>Email: contacto@bluespring.com</p>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                &copy; 2024 Blue Spring | Todos los derechos reservados
+            </div>
+        </footer>
 
 <!-- Modal para mostrar después del envío -->
 <div id="modal" class="modal">

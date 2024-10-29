@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="/CSS/normalizar.css">
 </head>
 <body>
-    <header>
+    <header class="header_inicio padding_main">
         <div class="header_superior">
             <div class="logo">
-                <img src="/images/logo.png" alt="">
+                <img src="../images/logo.png">
                 <a class="nav_inicio" href="/HTML/index.html">Blue Spring</a>
             </div>
         </div>
@@ -54,23 +54,23 @@
                 <ul class="ul_materiales">
                     <h3 class="material_type">Tubos</h3>
                     <li class="li_material">PVC</li>
-                        <button class="cant_button" id="tubo_pvc">
-                            <span class="menos"> - </span>
-                            <span class="num">0</span>
-                            <span class="mas">+</span>
-                        </button>
+                    <button class="cant_button" id="tubo_pvc">
+                        <span class="menos"> - </span>
+                        <span class="num">0</span>
+                        <span class="mas">+</span>
+                    </button>
                     <li class="li_material">Polietileno</li>
-                        <button class="cant_button" id="polietileno">
-                            <span class="menos"> - </span>
-                            <span class="num">0</span>
-                            <span class="mas">+</span>
-                        </button>
+                    <button class="cant_button" id="polietileno">
+                        <span class="menos"> - </span>
+                        <span class="num">0</span>
+                        <span class="mas">+</span>
+                    </button>
                     <li class="li_material">Asbesto</li>
-                        <button class="cant_button" id="asbesto">
-                            <span class="menos"> - </span>
-                            <span class="num">0</span>
-                            <span class="mas">+</span>
-                        </button>
+                    <button class="cant_button" id="asbesto">
+                        <span class="menos"> - </span>
+                        <span class="num">0</span>
+                        <span class="mas">+</span>
+                    </button>
                     <li class="li_material">Fierro</li>
                     <button class="cant_button" id="fierro">
                         <span class="menos"> - </span>
@@ -194,111 +194,32 @@
                         <span class="num">0</span>
                         <span class="mas">+</span>
                     </button>
-                    <li class="li_material">Válvula de seccionamiento de hierro fundido</li>
-                    <button class="cant_button" id="valvula_seccionamiento_hierro">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Bridas de fierro</li>
-                    <button class="cant_button" id="brida_hierro">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Empaque de hule neopreno  </li>
-                    <button class="cant_button" id="empaque_hule_neopreno">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Arena</li>
-                    <button class="cant_button" id="arena">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Grava</li>
-                    <button class="cant_button" id="grava">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Pala</li>
-                    <button class="cant_button" id="pala">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Pico</li>
-                    <button class="cant_button" id="pico">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Barreta</li>
-                    <button class="cant_button" id="barretas">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Marro</li>
-                    <button class="cant_button" id="marro">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Serrucho</li>
-                    <button class="cant_button" id="serrucho">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Flexómetro</li>
-                    <button class="cant_button" id="flexometro">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Escofina</li>
-                    <button class="cant_button" id="escofina">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Pinza mecánica</li>
-                    <button class="cant_button" id="pinza_mecanica">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Suplente de gas</li>
-                    <button class="cant_button" id="suplente_gas">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Machete</li>
-                    <button class="cant_button" id="machete">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
-                    <li class="li_material">Arco de segueta</li>
-                    <button class="cant_button" id="arco_segueta">
-                        <span class="menos"> - </span>
-                        <span class="num">0</span>
-                        <span class="mas">+</span>
-                    </button>
                 </ul>
-            </div>
-            <div class="confirm_box">
-                <button class="confirm_button">
-                    <span>Confirmar</span>
-                </button>
+                <div class="confirm_box">
+                    <button class="confirm_button">Confirmar</button>
+                </div>
             </div>
         </section>
     </main>
-    <script src="/JS/Almacen.js"></script>
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer_section about">
+                <h3>Sobre Blue Spring</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue facilisis ipsum, a tempus nisi.</p>
+            </div>
+            <div class="footer_section contact">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: +123 456 789</p>
+                <p>Email: contacto@bluespring.com</p>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            &copy; 2024 Blue Spring | Todos los derechos reservados
+        </div>
+    </footer>
+
+    <script>
+        
+    </script>
 </body>
 </html>

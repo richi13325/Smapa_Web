@@ -1,0 +1,62 @@
+
+.img_inicio {
+    position: relative;
+    width: 100%; /* Ancho total de la pantalla */
+    height: 100vh; /* Ocupa toda la ventana visible */
+    background-image: linear-gradient(100deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    padding: auto;
+    margin: auto;
+    color: #f9f9f9;
+}
+
+.h1_p{
+    margin: 20px;
+
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+
+.login_container {
+    width: 100%;
+    padding-top: 30px; 
+    max-width: 600px;
+    margin: auto; 
+}
+
+.formulario_asistencia {
+    margin: auto;
+    padding: 30px 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario_asistencia input {
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: #023877;
+    color: #ffff;
+}
+
+.select_container {
+    margin: 15px;
+    padding: 6px 8px;
+}

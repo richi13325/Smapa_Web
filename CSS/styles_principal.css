@@ -11,30 +11,46 @@
     font-family: 'Lato', sans-serif;
 }
 
-header{
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+header {
     width: 100%;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
-    background: #f9f9f9;
+    z-index: 1000;
+    background-color: #f9f9f9; /* Asegúrate de que tenga el color de fondo */
+    margin: 0;
+    padding: 0;
 }
 
-main{
-    background-color: #f9f9f9;
+main {
     min-height: 100vh;
-    padding: 20px;
+    margin-top: 70px;
+    padding: 0;
 }
 
 /*Parte superior LOGO*/
-.header_superior{
+.header_inicio {
+    position: relative;
+}
+
+.header_superior {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 10px 0;
+    background-color: #f9f9f9;
 }
+
+
 .logo{
     display: flex;
     align-items: center; 
@@ -60,7 +76,6 @@ main{
     height: 70px;
     background: #022144;
     padding: 0 20px;
-    
 }
 
 .menu{
@@ -182,5 +197,67 @@ nav ul li ul li a:hover{
     font-size: 14px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 }
-/*Parte principal */
+
+.padding_main{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*FOOTER */
+/* Footer Styles */
+.footer {
+    background-color: #023877; /* Fondo azul para coincidir con el botón */
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 0.9em;
+    
+}
+
+.footer_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer_section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer_section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #f9f9f9; /* Color de encabezados en el footer */
+}
+
+.footer_section p, .footer_section ul, .footer_section ul li a {
+    color: #fff; /* Color del texto y enlaces */
+}
+
+.footer_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 8px;
+}
+
+
+.footer_section ul li a:hover {
+    color: #fff; /* Color al pasar el cursor sobre el enlace */
+}
+
+.footer_bottom {
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+    color: #ffdd57;
+    font-size: 0.85em;
+    margin-top: 20px;
+}
 
