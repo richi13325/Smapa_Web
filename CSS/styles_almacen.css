@@ -42,7 +42,7 @@ h2{
 }
 
 .li_material{
-    margin:auto;
+    margin: auto;
     padding: 2px;
     display: flex;
     justify-content: space-between;
