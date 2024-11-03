@@ -27,7 +27,7 @@
                         <li><a  class="link">Trámites y Servicios</a>
                             <ul>
                                 <li><a href="/HTML/informe.html">Realizar</a></li>
-                                <li><a href="#">Consultar</a></li>
+                                <li><a href="/HTML/Consultar.html">Consultar</a></li>
                             </ul>
                         </li>
                         <li>
@@ -173,58 +173,6 @@
     </div>
 </div>
 
-
-        <script>
-            // Función para obtener el número de reporte actual desde localStorage
-            function obtenerNumeroReporte() {
-                let numeroReporte = localStorage.getItem('numeroReporte');
-                if (numeroReporte === null) {
-                    // Si no hay un número almacenado, inicializarlo en 0000
-                    numeroReporte = 0;
-                } else {
-                    // Incrementar el número almacenado
-                    numeroReporte = parseInt(numeroReporte, 10) + 1;
-                    // Limitar el número a 9999
-                    if (numeroReporte > 9999) {
-                        numeroReporte = 0; // Reiniciar a 0000 cuando llegue a 1000
-                    }
-                }
-                // Guardar el número actualizado en localStorage
-                localStorage.setItem('numeroReporte', numeroReporte);
-                return numeroReporte.toString().padStart(4, '0'); // Convertir a string y agregar ceros al inicio
-            }
-            
-            document.getElementById('reportForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-                
-                // Captura los valores del formulario
-                const nombre = document.getElementById('nombre').value;
-                const apellidoPaterno = document.getElementById('apellido-paterno').value;
-                const apellidoMaterno = document.getElementById('apellido-materno').value;
-            
-                // Obtener el número de reporte incremental
-                const numeroIncremental = obtenerNumeroReporte();
-            
-                // Obtener iniciales del nombre y apellidos
-                const iniciales = nombre.charAt(0).toUpperCase() + apellidoPaterno.charAt(0).toUpperCase() + apellidoMaterno.charAt(0).toUpperCase();
-            
-                // Generar el número de reporte
-                const numeroReporte = iniciales + "-" + numeroIncremental;
-            
-                // Mostrar el número de reporte en el modal
-                document.getElementById('modal-text').innerHTML = "Tu reporte ha sido enviado con éxito.<br>No. Reporte: <strong>" + numeroReporte + "</strong>";
-            
-                // Mostrar el modal
-                document.getElementById('modal').style.display = "block";
-            });
-            
-// Código para cerrar el modal y redirigir a inicio.html
-document.getElementById('close-modal').addEventListener('click', function() {
-    document.getElementById('modal').style.display = "none";
-    window.location.href = 'inicio.html'; // Redirecciona a inicio.html
-});
-
-            </script>
             
 </body>
 </html>
