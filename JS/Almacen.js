@@ -39,6 +39,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Evento para el input de cantidad
+    const cantInputs = document.querySelectorAll(".cant_input");
+    cantInputs.forEach(input => {
+        input.addEventListener("input", function () {
+            // Remover signos negativos y positivos al escribir
+            this.value = this.value.replace(/[^\d]/g, ''); 
+
+            // Permitir múltiples ceros, pero eliminar el "0" inicial si hay otros números
+            if (this.value.length > 1 && this.value.startsWith("0")) {
+                this.value = this.value.replace(/^0+/, '');
+            }
+        });
+    });
+
     // Evento para enviar los datos a PHP
     document.getElementById("submit_button").addEventListener("click", function () {
         // Convertir los datos del objeto a JSON
