@@ -1,3 +1,20 @@
+v<?php
+
+$server="localhost";
+$user="root";
+$pass="";
+$db="new_spring";
+
+$conexion=new mysqli($server,$user,$pass,$db,"3307");
+
+if ($conexion->connect_errno){
+    die("conexion fallida". $conexion->connect_errno);
+} else{
+    //echo "conectado";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -51,7 +68,7 @@
             <h2>Informe de Fallas en Tuberías</h2>
             <p>Si detectas fallas en las tuberías de agua, por favor repórtalo completando el siguiente formulario:</p>
             
-            <form id="reportForm" class="styled-form">
+            <from action="#" name="ejemplo" method="post" class="styled-form">
 
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -144,7 +161,7 @@
                     <input type="email" id="email" name="email" placeholder="" required>
                 </div>
 
-                <button type="submit" class="submit-btn">Enviar Reporte</button>
+                <button type="submit" class="submit-btn" name="registro">Enviar Reporte</button>
             </form>
         </section>
         <footer class="footer">
@@ -176,3 +193,22 @@
             
 </body>
 </html>
+
+<?php
+if(isset($_POST["registro"])){
+    $nombre=$_POST["nombre"];
+    $apellido_paterno=$_POST["apellido_paterno"];
+    $apellido_materno=$_POST["apellido_materno"];
+    $telefono=$_POST["telefono"];
+    $direccion=$_POST["direccion"];
+    $colonia=$_POST["colonia"];
+    $codigo_postal=$_POST["codigo_postal"];
+    $descripcion=$_POST["descripcion"];
+    $email=$_POST["email"];
+    
+
+    $insertarDatos= "INSERT INTO cliente VALUES('','$nombre','$apellido_paterno','$apellido_materno','$telefono','$direccion','$colonia','$codigo_postal','$descripcion','$email')";
+
+    $ejecutarInsertar=mysqli_query($conexion,$insertarDatos);
+}
+?>
