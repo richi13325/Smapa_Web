@@ -11,6 +11,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+h1,h2,h3,p{
+    font-family: 'Montserrat', sans-serif;
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -25,7 +29,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #f9f9f9; /* Asegúrate de que tenga el color de fondo */
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
@@ -205,7 +209,7 @@ nav ul li ul li a:hover{
 /*FOOTER */
 /* Footer Styles */
 .footer {
-    background-color: #023877; /* Fondo azul para coincidir con el botón */
+    background-color: #022144; /* Fondo azul para coincidir con el botón */
     color: #fff;
     padding: 40px 20px;
     margin-top: 100px;
