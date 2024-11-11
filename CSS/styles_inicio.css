@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.img_inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(100deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    text-align: center; /* Centra el texto */
+}
+
+/* Colores para las palabras */
+.letra_1 {
+    color: #1B94DB; /* Color para "Blue" */
+    font-weight: bold; /* Peso de la letra */
+}
+
+.letra_2{
+    color: #E6E61F; /* Color para "Spring" */
+
+    font-weight: bold; /* Peso de la letra */
+}
+
+/* Cambia el color de la primera letra de cada palabra */
+.color1{
+    color: #ffff; /* Color para la primera letra de "Blue" */
+}
+
+.color2{
+    color: #ffff; /* Color para la primera letra de "Spring" */
+}
+
+
+
+.h1_p {
+    margin: 20px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+.login_container {
+    width: 100%;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.formulario_asistencia {
+    margin: auto;
+    padding: 30px 25px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario_asistencia input[type="submit"] {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #023877;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.formulario_asistencia input[type="submit"]:hover {
+    background-color: #0254a6;
+}
+
+.select_container {
+    margin: 15px 0;
+    padding: 6px 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Añade estos estilos al final de tu archivo styles_inicio.css */
+
+.servicios {
+    background-color: #E3E3E5; /* Color de fondo suave para servicios */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servicios_container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.servicio {
+    max-width: 200px;
+    margin: 10px;
+}
+
+.h3_servicio{
+    padding-bottom: 4px;
+    padding: auto;
+}
+
+.servicio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.p_servicio{
+    margin-top: 4px;
+    padding: auto;
+}
+
+.galeria {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.galeria_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria_container img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
