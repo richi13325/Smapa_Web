@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
+:root {
+    --color-primario: #1B94DB;
+    --color-secundario: #E6E61F;
+    --color-hover: #0254a6;
+    --color-fondo-formulario: #ffffff;
+    --color-texto: #555;
+    --color-fondo-servicios: #E3E3E5;
+    --color-boton: #023877;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .img_inicio {
     position: relative;
     width: 100%;
@@ -16,34 +30,34 @@
 }
 
 h1 {
-    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
-    text-align: center; /* Centra el texto */
+    font-size: 3rem;
+    text-align: center;
 }
 
-/* Colores para las palabras */
+main {
+    width: 100%;
+    margin: auto;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
 .letra_1 {
-    color: #1B94DB; /* Color para "Blue" */
-    font-weight: bold; /* Peso de la letra */
+    color: var(--color-primario);
+    font-weight: bold;
 }
 
-.letra_2{
-    color: #E6E61F; /* Color para "Spring" */
-
-    font-weight: bold; /* Peso de la letra */
+.letra_2 {
+    color: var(--color-secundario);
+    font-weight: bold;
 }
 
-/* Cambia el color de la primera letra de cada palabra */
-.color1{
-    color: #ffff; /* Color para la primera letra de "Blue" */
+.color1, .color2 {
+    color: #ffffff;
 }
 
-.color2{
-    color: #ffff; /* Color para la primera letra de "Spring" */
-}
-
-
-
-.h1_p {
+.subtitulo_inicio {
     margin: 20px;
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
@@ -67,7 +81,7 @@ main {
     margin: 20px 0;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: var(--color-fondo-formulario);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -76,7 +90,7 @@ main {
 .formulario_asistencia input[type="submit"] {
     padding: 10px 15px;
     border-radius: 5px;
-    background-color: #023877;
+    background-color: var(--color-boton);
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -85,7 +99,12 @@ main {
 }
 
 .formulario_asistencia input[type="submit"]:hover {
-    background-color: #0254a6;
+    background-color: var(--color-hover);
+}
+
+.formulario_asistencia input[type="submit"]:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
 }
 
 .select_container {
@@ -96,55 +115,108 @@ main {
     width: 100%;
 }
 
-/* Añade estos estilos al final de tu archivo styles_inicio.css */
-
 .servicios {
-    background-color: #E3E3E5; /* Color de fondo suave para servicios */
-    padding: 40px 20px;
+    background-color: var(--color-fondo-servicios);
     text-align: center;
+    padding: 70px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.servicios h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 .servicios_container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .servicio {
-    max-width: 200px;
-    margin: 10px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
 }
 
-.h3_servicio{
-    padding-bottom: 4px;
-    padding: auto;
+.h3_servicio {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 .servicio img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.p_servicio{
-    margin-top: 4px;
-    padding: auto;
+.p_servicio {
+    font-size: 1em;
+    color: var(--color-texto);
 }
 
 .galeria {
-    padding: 40px 20px;
     text-align: center;
+    padding: 20px;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.galeria h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .galeria_container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
-.galeria_container img {
+.galeria_section {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.galeria_section img {
     width: 200px;
-    margin: 10px;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
 }
 
+.control_icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffffff; /* Color de ícono blanco */
+}
 
+.control_icon.left {
+    left: -60px; /* Ajusta la posición del botón izquierdo */
+}
+
+.control_icon.right {
+    right: -60px; /* Ajusta la posición del botón derecho */
+}
+
+.control_icon:hover {
+    transform: translateY(-50%) scale(1.2);
+}

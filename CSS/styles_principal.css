@@ -231,6 +231,7 @@ nav ul li ul li a:hover{
     flex: 1;
     min-width: 200px;
     margin: 10px 0;
+    padding: 0 35px;
 }
 
 .footer_section h3 {
@@ -240,7 +241,7 @@ nav ul li ul li a:hover{
 }
 
 .footer_section p, .footer_section ul, .footer_section ul li a {
-    color: #fff; /* Color del texto y enlaces */
+    color: #fff; 
 }
 
 .footer_section ul {
