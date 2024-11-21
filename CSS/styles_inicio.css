@@ -12,6 +12,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .img_inicio {
@@ -116,84 +121,153 @@ main {
 }
 
 .servicios {
-    background-color: var(--color-fondo-servicios);
     text-align: center;
-    padding: 70px;
-    margin: auto;
-    margin-bottom: 20px;
+    padding: 2rem 1rem;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 900px;
 }
 
 .servicios h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    text-transform: uppercase;
 }
 
 .servicios_container {
     display: flex;
+    gap: 2rem;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
 .servicio {
-    background-color: #ffffff;
-    padding: 25px;
+    background: #E3E3E5;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+    text-align: left;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.h3_servicio {
-    font-size: 1.5em;
-    margin: 10px 0;
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .servicio img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.h3_servicio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.5rem;
 }
 
 .p_servicio {
-    font-size: 1em;
-    color: var(--color-texto);
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 .galeria {
     text-align: center;
-    padding: 20px;
-    position: relative;
-    max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .galeria h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 100px;
 }
 
-.galeria_container {
+.galeria_content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
-    overflow: hidden;
     width: 100%;
-    max-width: 800px;
-    margin: auto;
+}
+
+.galeria_wrapper {
+    display: flex;
+    flex-direction: column; /* Apilamos las secciones de forma vertical */
+    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
+    justify-content: center; /* Centramos las secciones */
+    align-items: center; /* Centramos las secciones dentro del contenedor */
+    position: relative;
 }
 
 .galeria_section {
     display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias líneas si es necesario */
+    justify-content: space-between; /* Distribuye las imágenes de manera uniforme */
+    width: 100%; /* Asegura que cada sección ocupe todo el ancho disponible */
+    transition: opacity 0.5s ease-in-out; /* Suaviza las transiciones de visibilidad */
+    opacity: 0; /* Oculta por defecto las secciones */
+    position: absolute; /* Aplica posicionamiento absoluto para las transiciones */
 }
 
 .galeria_section img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
+    width: 22%; /* Tamaño de las imágenes, puedes ajustarlo según tus necesidades */
+    max-height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Asegura que las imágenes mantengan la proporción */
+    margin: 10px 0; /* Margen entre las imágenes */
+}
+
+.galeria_section.active {
+    opacity: 1; /* Solo la sección activa será visible */
+}
+
+
+.galeria_section img {
+    width: 22%; /* Mantén las imágenes con un tamaño coherente */
+    max-height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Asegura que las imágenes mantengan la proporción sin estirarse */
+    margin: 0 5px; /* Espaciado entre las imágenes */
+}
+
+
+.galeria_controls {
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria_controls img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.galeria_controls img:hover {
+    opacity: 1;
+}
+
+
+
+.galeria_controls.left {
+    left: 10px;
+}
+
+.galeria_controls.right {
+    right: 10px;
 }
 
 .control_icon {

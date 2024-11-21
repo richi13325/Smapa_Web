@@ -53,6 +53,22 @@
             
             <p class="h1_p">Comprometidos con el servicio y la calidad en cada paso.</p>
         </section>
+    </div>
+    <section class="servicios">
+        <h2>Principales Servicios</h2>
+        <div class="servicios_container">
+            <div class="servicio">
+                <h3 class="h3_servicio">Reparación de tubo surtidor</h3>
+                <img src="../images/img_tubo_surtidor.jpg" alt="Servicio 1">
+                <p class="p_servicio">Reparación profesional de tubos surtidores para garantizar su óptimo funcionamiento y seguridad operativa.</p>
+            </div>
+            <div class="servicio">
+                <h3 class="h3_servicio">Reparación Toma domiciliaria</h3>
+                <img src="../images/img_toma_domiciliaria.jpg" alt="Servicio 2">
+                <p class="p_servicio">Reparación eficiente de tomas domiciliarias para asegurar un suministro confiable y sin fugas.</p>
+            </div>
+        </div>
+    </section>
         <div class="login_container">
             <form class="formulario_asistencia" action="#" method="post">
                 <h2>Asistencia del día</h2>
@@ -71,28 +87,32 @@
         </div>
         <section class="galeria">
             <h2>Nuestra Galería</h2>
-            <div class="galeria_container">
-                <div class="galeria_controls">
-                    <img src="/images/left_arrow.svg" alt="Anterior" onclick="showSection(1)" class="control_icon left">
+            <div class="galeria_content">
+                <!-- Botón Izquierdo -->
+                <div class="galeria_controls left">
+                    <img src="/images/left_arrow.svg" alt="Anterior" onclick="navigate(-1)">
                 </div>
-                <div class="galeria_section" id="section1">
-                    <img src="../images/img_galeria1.jpg" alt="Imagen 1">
-                    <img src="../images/img_galeria2.jpg" alt="Imagen 2">
-                    <img src="../images/img_galeria3.jpg" alt="Imagen 3">
-                    <img src="../images/img_galeria4.jpg" alt="Imagen 4">
+                <!-- Contenedor de las imágenes -->
+                <div class="galeria_wrapper">
+                    <div class="galeria_section" id="section1">
+                        <img src="../images/img_galeria1.jpg" alt="Imagen 1">
+                        <img src="../images/img_galeria2.jpg" alt="Imagen 2">
+                        <img src="../images/img_galeria3.jpg" alt="Imagen 3">
+                        <img src="../images/img_galeria4.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="galeria_section" id="section2">
+                        <img src="../images/img_galeria5.jpg" alt="Imagen 5">
+                        <img src="../images/img_galeria6.jpg" alt="Imagen 6">
+                        <img src="../images/img_galeria7.jpg" alt="Imagen 7">
+                        <img src="../images/img_galeria8.jpg" alt="Imagen 8">
+                    </div>
                 </div>
-                <div class="galeria_section" id="section2">
-                    <img src="../images/img_galeria5.jpg" alt="Imagen 5">
-                    <img src="../images/img_galeria6.jpg" alt="Imagen 6">
-                    <img src="../images/img_galeria7.jpg" alt="Imagen 7">
-                    <img src="../images/img_galeria8.jpg" alt="Imagen 8">
-                </div>
-                <div class="galeria_controls">
-                    <img src="./images/right_arrow.svg" alt="Siguiente" onclick="showSection(2)" class="control_icon right">
+                <!-- Botón Derecho -->
+                <div class="galeria_controls right">
+                    <img src="/images/right_arrow.svg" alt="Siguiente" onclick="navigate(1)">
                 </div>
             </div>
-        </section>
-        
+        </section> 
     </main>
     <footer class="footer">
         <div class="footer_content">
