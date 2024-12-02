@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+h3 {
+    margin: 10px 0; /* Añade un margen superior e inferior */
+    font-size: 1em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #333; /* Ajusta el color del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.h3_top {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.Proveedor_name {
+    color: #333; 
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+.cantidad_h3 {
+    margin-left: auto;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.material_container {
+    width: 100%;
+    padding-top: 50px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.material_box {
+    margin: auto;
+    padding: 30px 25px 25px 25px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.material_type {
+    padding: 10px 3px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.ul_materiales {
+    margin: 20px;
+    padding: 10px 0;
+}
+
+.li_material {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.material_name {
+    flex-grow: 1;
+    padding-right: 10px;
+    font-size: 1em;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.current_qty {
+    width: 40px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    margin-left: 10px; 
+}
+
+.cant_input {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px;
+    outline: none;
+    margin-right: 60px;
+}
+
+.cant_input:focus {
+    background-color: #f0f0f0;
+    border-color: #888;
+}
+
+
+
+
+.num {
+    font-size: 13px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 5px;
+}
+
+.current_qty {
+    width: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #444;
+    padding: 0 10px; /* Aumenta el padding para más espacio */
+    margin: 10px 20px;
+}
+
+.confirm_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: #888;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 20px; /* Espacio lateral para centrar el botón */
+}
+
+.confirm_button:hover {
+    transform: scale(0.98);
+    background-color: #444; 
+    font-size: 17px; 
+}

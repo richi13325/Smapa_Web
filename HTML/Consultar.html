@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Historial - SMAPA</title>
+    <link rel="stylesheet" href="/CSS/normalizar.css">
+    <link rel="stylesheet" href="/CSS/styles_principal.css">
+    <link rel="stylesheet" href="/CSS/styles_informe.css">
+</head>
+<body>
+    <header>
+        <div class="header_superior">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <a class="nav_inicio" href="/HTML/inicio.html">Blue Spring</a>
+            </div>
+        </div>
+        <div class="container_menu">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/HTML/inicio.html" id="selected"></a>
+                        </li>
+                        <li><a  class="link" href="" >Trámites y Servicios</a>
+                            <ul>
+                                <li><a href="/HTML/informe.html">Realizar</a></li>
+                                <li><a href="/HTML/Consultar.html">Consultar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="link" href="#">Historial</a>
+                        </li>
+                        <li>
+                            <a class="link" href="/HTML/Almacen.html">Almacen</a>
+                        </li>
+                        <li>
+                            <a class="link" href="/HTML/personal.html">Personal</a>
+                        </li>
+                        <li>
+                            <a class="link" href="#">Colonias</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="consulta" class="container">
+        <h2>Historial de Reportes</h2>
+        <div id="reportes">
+            <!-- Aquí se mostrará el historial de reportes -->
+        </div>
+    </section>
+
+    <script>
+        // Cargar el historial de reportes al cargar la página
+        window.onload = function() {
+            fetch('/PHP/consultar.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('reportes').innerHTML = data;
+                })
+                .catch(error => console.error('Error al cargar los reportes:', error));
+        };
+    </script>
+</body>
+</html>
